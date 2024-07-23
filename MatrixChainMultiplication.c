@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<limits.h>
-// bokka abhi  
+ 
 void mcm(int arr[], int n){
     int dp[n][n];
-    int bracket[n][n];
+    int bracket[n][n]; // this is the bracket matrix to track the where the bracket  is available...
+    
     
     for(int i  = 0 ; i<n; i++){
         for(int j = 0 ; j<n;j++){
             dp[i][j] = -1;
-            bracket[i][j] =-1;
+            bracket[i][j] =-1;  // -1 means that portion is untouched.
         }
     }
     for(int  i = 0 ; i<n;i++){
